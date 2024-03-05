@@ -1,9 +1,40 @@
 console.log(data_Eng[0]);
 console.log(data_Arm[0]);
+let data ;
 
 
+var now = new Date();
 
-let data = data_Arm;
+// Get the timezone offset in minutes
+var timezoneOffset = now.getTimezoneOffset();
+
+// Convert the timezone offset to hours and minutes
+var timezoneOffsetHours = Math.abs(Math.floor(timezoneOffset / 60));
+var timezoneOffsetMinutes = Math.abs(timezoneOffset % 60);
+
+// Determine if the timezone offset is ahead or behind UTC
+var timezoneSign = timezoneOffset > 0 ? "-" : "+";
+
+// Format the timezone string
+var timezoneString = timezoneSign + 
+                     (timezoneOffsetHours < 10 ? '0' : '') + timezoneOffsetHours + ":" +
+                     (timezoneOffsetMinutes < 10 ? '0' : '') + timezoneOffsetMinutes;
+
+// Output the timezone
+// console.log( JSON.stringify(timezoneString));
+// console.log(JSON.stringify("+04:00"))
+
+if(JSON.stringify("+04:00") == JSON.stringify(timezoneString) ){
+  console.log("Space Minds Arm");
+  data = data_Arm;
+}else{
+  console.log("Space Minds Eng");
+  data = data_Eng;
+    
+
+}
+
+
 
 
 
