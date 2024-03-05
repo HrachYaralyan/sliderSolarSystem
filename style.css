@@ -121,3 +121,49 @@ body{
 }.buttons button:hover{
     background-color: #bac383;
 }
+
+
+
+
+
+@media screen and (max-width:800px){
+    .item:nth-child(3),
+    .item:nth-child(4),
+    .item:nth-child(5){
+        display: none;
+    }
+
+   .item .content{
+        position: absolute;
+        top:50%;
+        left:35%;
+        width:350px;
+        text-align: left;
+        padding:0;
+        color:#eee;
+        transform: translate(0,-50%);
+        display: none;
+        font-family: system-ui;
+        background: #0000008e;
+        padding: 7px;
+    }
+
+}
+
+@media screen and (max-width:500px){
+   .item .content{
+        position: absolute;
+        top:50%;
+        left:33%;
+        width:300px;
+        text-align: left;
+        padding:0;
+        color:#eee;
+        transform: translate(0,-50%);
+        display: none;
+        font-family: system-ui;
+        background: #0000008e;
+        padding: 3px;
+    }
+
+}
